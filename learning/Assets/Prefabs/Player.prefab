@@ -1,0 +1,160 @@
+{
+  "RootObject": {
+    "__guid": "33f8f51f-8e54-4ff7-9b10-a1b29a47a56f",
+    "Flags": 0,
+    "Name": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "6d7e01f9-49f0-4f0b-9f08-43e2917de851",
+        "BodyGroups": 341,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/citizen.vmdl",
+        "Morphs": {},
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "c371048b-b3e1-4ebf-a099-c3edd9b4fdfc",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+        "__guid": "fa50967f-f291-4183-9d2c-80111eed5291",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "6d7e01f9-49f0-4f0b-9f08-43e2917de851",
+          "go": "33f8f51f-8e54-4ff7-9b10-a1b29a47a56f",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "SnotPlayer",
+        "__guid": "2f4a482f-84e2-4f13-ad67-57868f8e2078",
+        "Animator": {
+          "_type": "component",
+          "component_id": "fa50967f-f291-4183-9d2c-80111eed5291",
+          "go": "33f8f51f-8e54-4ff7-9b10-a1b29a47a56f",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "Camera": {
+          "_type": "gameobject",
+          "go": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a"
+        },
+        "Controller": {
+          "_type": "component",
+          "component_id": "c371048b-b3e1-4ebf-a099-c3edd9b4fdfc",
+          "go": "33f8f51f-8e54-4ff7-9b10-a1b29a47a56f",
+          "component_type": "CharacterController"
+        },
+        "EyePosition": "0,0,60",
+        "JumpStrength": 400,
+        "RunSpeed": 250,
+        "WalkSpeed": 120
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+        "Flags": 0,
+        "Name": "Camera",
+        "Position": "-130,0.00001396994,60",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 0.1
+          },
+          {
+            "__type": "Sandbox.Bloom",
+            "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+            "BloomColor": {
+              "color": [
+                {
+                  "c": "1,1,1,1"
+                },
+                {
+                  "t": 1,
+                  "c": "1,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "BloomCurve": [
+              {
+                "y": 0.5
+              },
+              {
+                "x": 1,
+                "y": 1
+              }
+            ],
+            "Mode": "Additive",
+            "Strength": 0.5,
+            "Threshold": 0.5,
+            "ThresholdWidth": 0.5
+          },
+          {
+            "__type": "Sandbox.Tonemapping",
+            "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+            "__version": 1,
+            "AutoExposureEnabled": true,
+            "ExposureBias": 2,
+            "ExposureCompensation": 0,
+            "ExposureMethod": "RGB",
+            "MaximumExposure": 2,
+            "MinimumExposure": 1,
+            "Mode": "Legacy",
+            "Rate": 1
+          },
+          {
+            "__type": "Sandbox.Sharpen",
+            "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
+            "Scale": 0.02
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
