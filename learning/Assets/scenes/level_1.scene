@@ -76,11 +76,10 @@
       ]
     },
     {
-      "__guid": "fe2c566c-a7bb-402b-b31a-2b3c5c895f5b",
+      "__guid": "7d4ebe66-21a3-4d49-8508-c4ee1cf277bc",
       "Flags": 0,
-      "Name": "Player",
-      "Position": "-315.7814,570.627,4",
-      "Tags": "player",
+      "Name": "player",
+      "Position": "-347.5504,570.1594,4",
       "Enabled": true,
       "__Prefab": "prefabs/player.prefab",
       "__PrefabVariables": {}

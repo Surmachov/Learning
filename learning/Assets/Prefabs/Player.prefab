@@ -69,8 +69,19 @@
         },
         "EyePosition": "0,0,60",
         "JumpStrength": 400,
+        "PunchCooldown": 0.5,
+        "PunchRange": 90,
+        "PunchStrength": 1,
         "RunSpeed": 250,
         "WalkSpeed": 120
+      },
+      {
+        "__type": "UnitInfo",
+        "__guid": "2339ce9e-704e-4af9-854a-2db24ca27fd9",
+        "HealthRegenAmount": 0.5,
+        "HealthRegenTimer": 3,
+        "MaxHealth": 5,
+        "Team": "Player"
       }
     ],
     "Children": [

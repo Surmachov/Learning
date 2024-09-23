@@ -1,0 +1,70 @@
+{
+  "RootObject": {
+    "__guid": "8e82d0ef-0216-4f1b-9433-57ae221b3205",
+    "Flags": 0,
+    "Name": "snot",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "UnitInfo",
+        "__guid": "70df2d18-6ee7-492b-ade6-1c2be405b596",
+        "HealthRegenAmount": 0.3,
+        "HealthRegenTimer": 5,
+        "MaxHealth": 3,
+        "Team": "Snot"
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "b66535cb-c37f-41d1-a3e3-80e243ecee39",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/snot/snot.vmdl",
+        "Morphs": {},
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "51570ce6-7a5a-459a-836e-b422925a26fc",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 30,
+        "Static": false
+      },
+      {
+        "__type": "SnotComponent",
+        "__guid": "89f95ee0-af96-4515-8937-1277a9f4fc04",
+        "Info": {
+          "_type": "component",
+          "component_id": "70df2d18-6ee7-492b-ade6-1c2be405b596",
+          "go": "8e82d0ef-0216-4f1b-9433-57ae221b3205",
+          "component_type": "UnitInfo"
+        },
+        "Model": {
+          "_type": "component",
+          "component_id": "b66535cb-c37f-41d1-a3e3-80e243ecee39",
+          "go": "8e82d0ef-0216-4f1b-9433-57ae221b3205",
+          "component_type": "SkinnedModelRenderer"
+        }
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "fish.snot"
+  ],
+  "__version": 1
+}
